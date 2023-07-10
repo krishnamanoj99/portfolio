@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="ICON.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRISHNA MANOJ</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bar">
+        <img class="nav-logo" src="LOGO.png">
+        <button class="home-btn" onclick="openHome()">Home</button>
+        <button class="about-btn" onclick="openAbout()">About</button>
+        <button class="skills-btn" onclick="openSkill()">Skills</button>
+        <button class="contacts-btn" onclick="sendEmail()">Contact</button>
+    </div>
+
+    <div class="intro-pic-box">
+        <div class="intro">
+            <div class="intro-skills" id="intro-skills"></div>
+            <script>
+                const words = ["KRISHNA MANOJ ", "»  Problem Solving", "»  Coding", "»  Software Development", "»  Web Development"];
+
+                let currentIndex = 0;
+                function displayNextWord() {
+                  if (currentIndex < words.length) {
+                    let newElement;
+                    if (currentIndex == 0){
+                        newElement = document.createElement("h1");
+                    }
+                    else{
+                        newElement = document.createElement("h3");
+                    }
+                    newElement.textContent = words[currentIndex];
+
+                    const container = document.getElementById("intro-skills");
+                    container.appendChild(newElement);
+
+                    currentIndex++;
+                
+                    setTimeout(displayNextWord, 1500);
+                  }
+                }
+                displayNextWord();
+            </script>
+        </div>
+        <img class="profile-pic" src="hacker.png">
+    </div>
+    
+</body>
+</html>
