@@ -1,25 +1,31 @@
 *{
     margin : 0px;
     padding: 0px;  
-    background-color: #343a40;
     font-family: 'Quicksand', sans-serif;
+}
+.body-class{
+    background-image: url("background.jpg");
+    background-size: cover;
 }
 .nav-bar{
     display: flex;
-    background-color: #212529;
+    background-color: #002539;
     height: 130px;
     border-bottom-right-radius: 15px;
     box-shadow: 5px 10px 10px;
 }
 .nav-logo{
-    margin-left: 100px;
+    margin-left: 150px;
     margin-right: 500px;
-    height: 130px;
-    width: 130px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
 }
 .home-btn{
     font-family: 'Quicksand', sans-serif;
-    background-color: #212529;
+    background: none;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -39,7 +45,7 @@
 }
 .about-btn{
     font-family: 'Quicksand', sans-serif;
-    background-color: #212529;
+    background: none;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -58,7 +64,7 @@
 }
 .skills-btn{
     font-family: 'Quicksand', sans-serif;
-    background-color: #212529;
+    background: none;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -77,7 +83,7 @@
 }
 .contacts-btn{
     font-family: 'Quicksand', sans-serif;
-    background-color: #212529;
+    background: none;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -95,51 +101,44 @@
     border-bottom-color: white;
 }
 
-.intro-pic-box{
+.intro{
     margin-top: 125px;
-    display:flex;
+    color: white;
+}
+.intro-name{
+    margin-left: 350px;
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.profile-pic{
-    display: block;
-    background-color: black;
-    border-radius: 100%;
-    width : 400px;
-    height: 400px;
-    margin-right: 300px;
+.gh-button{
+    margin-top: 10px;
     margin-left: auto;
-}
-h1{
-    margin-bottom: 20px;
-}
-h2, h3{
-    margin-left: 15px;
-    margin-bottom: 15px;
-}
-.intro{
-    display : block;
-    font-family: 'Quicksand', sans-serif;
-    font-size: larger;
-    color: white;
-    width : 500px;
-    height: 300px;
-    margin-top: 80px;
     margin-right: auto;
-    margin-left: 200px;
+    display: block;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #8ccef7;
+    border: 0;
+    cursor: pointer;
+}
+.gh-button:hover{
+    transform:scale(1.1);
 }
 
 /* FOR ABOUT PAGE */
 .about-banner{
-    background-color: #212529;
+    background-color: #002539;
     color: white;
-    text-shadow: 2px 2px 4px 4px #181a1c;
+    text-shadow: 2px 2px 4px 4px;
 }
 .about-boxes{
     color:white;
     font-size: large;
-    background-color: #212529;
-    /* box-shadow: 3px 3px 4px 8px #181a1c;
-    border-radius: 15px; */
+    background-color: #002539;
 }
 .about-me{
     margin-top: 100px;
@@ -149,8 +148,8 @@ h2, h3{
     margin-left: auto;
     margin-right: 100px;
     display: block;
-    background-color: #212529;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    background-color: #002539;
+    box-shadow: 3px 3px 4px 4px;
     border-radius: 15px;
     padding: 8px;
 }
@@ -162,11 +161,20 @@ h2, h3{
     margin-left: 100px;
     margin-right: auto;
     display: block;
-    background-color: #212529;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    background-color: #002539;
+    box-shadow: 3px 3px 4px 4px;
     border-radius: 15px;
     padding: 8px;
 }
+.clg-pic{
+    width: 300px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
 .about-interests{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -175,8 +183,8 @@ h2, h3{
     margin-left: auto;
     margin-right: 100px;
     display: block;
-    background-color: #212529;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    background-color: #002539;
+    box-shadow: 3px 3px 4px 4px;
     border-radius: 15px;
     padding: 8px;
 }
@@ -185,8 +193,7 @@ h2, h3{
 .skills-banner{
     background-color: #6c757d;
     color: white;
-    /* font-weight: 1500; */
-    text-shadow: 2px 2px 4px 4px #181a1c;
+    text-shadow: 2px 2px 4px 4px;
 }
 .skills-container{
     background-color: #6c757d;
@@ -194,6 +201,7 @@ h2, h3{
     justify-content: center;
     align-items: center;
 }
+
 .img-skills{
     margin-left: auto;
     margin-right: auto;
@@ -207,7 +215,7 @@ h2, h3{
     margin-left: auto;
     margin-right: auto;
     background-color: #6c757d;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    box-shadow: 3px 3px 4px 6px;
     border-radius: 15px;
 }
 .skills-web-tech{
@@ -219,7 +227,7 @@ h2, h3{
     margin-left: auto;
     margin-right: auto;
     background-color: #6c757d;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    box-shadow: 3px 3px 4px 6px;
     border-radius: 15px;
 }
 .skills-tools{
@@ -231,7 +239,7 @@ h2, h3{
     margin-left: auto;
     margin-right: auto;
     background-color: #6c757d;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    box-shadow: 3px 3px 4px 6px;
     border-radius: 15px;
 }
 .skills-others{
@@ -243,6 +251,6 @@ h2, h3{
     margin-left: auto;
     margin-right: auto;
     background-color: #6c757d;
-    box-shadow: 3px 3px 4px 8px #181a1c;
+    box-shadow: 3px 3px 4px 6px;
     border-radius: 15px;
 }

@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <link rel="icon" href="ICON.png" type="image/x-icon">
+    <link rel="icon" href="hacker.png" type="image/x-icon">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,46 +13,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Quicksand:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body-class">
     <div class="nav-bar">
-        <img class="nav-logo" src="LOGO.png">
+        <img class="nav-logo" src="hacker.png">
         <button class="home-btn" onclick="openHome()">Home</button>
         <button class="about-btn" onclick="openAbout()">About</button>
         <button class="skills-btn" onclick="openSkill()">Skills</button>
         <button class="contacts-btn" onclick="sendEmail()">Contact</button>
     </div>
 
-    <div class="intro-pic-box">
-        <div class="intro">
-            <div class="intro-skills" id="intro-skills"></div>
+    <div class="intro" id="intro">
+        <div class="intro-name" id="intro-name">
             <script>
-                const words = ["KRISHNA MANOJ ", "»  Problem Solving", "»  Coding", "»  Software Development", "»  Web Development"];
+                const letters = ["K", "R", "I", "S", "H", "N", "A", "M", "A", "N", "O", "J"];
 
                 let currentIndex = 0;
-                function displayNextWord() {
-                  if (currentIndex < words.length) {
+                function displayNextLetter() {
+                  if(currentIndex < letters.length){
                     let newElement;
-                    if (currentIndex == 0){
-                        newElement = document.createElement("h1");
+                    newElement = document.createElement("h1");
+                    newElement.style.fontSize = "80px";
+                                    
+                    newElement.textContent = letters[currentIndex];      
+                    if(currentIndex == 6){
+                        newElement.style.marginRight = '60px';
                     }
                     else{
-                        newElement = document.createElement("h3");
-                    }
-                    newElement.textContent = words[currentIndex];
+                        newElement.style.marginRight = '10px';
+                    }   
 
-                    const container = document.getElementById("intro-skills");
-                    container.appendChild(newElement);
-
+                    const container = document.getElementById("intro-name");
+                    container.appendChild(newElement);  
+                    
                     currentIndex++;
-                
-                    setTimeout(displayNextWord, 1500);
+                                    
+                    setTimeout(displayNextLetter, 600);
                   }
                 }
-                displayNextWord();
+                displayNextLetter();
             </script>
         </div>
-        <img class="profile-pic" src="hacker.png">
+        <script>
+            setTimeout(displayGHButton, 7300);
+            function displayGHButton(){
+                let ghButton = document.createElement("button");
+                ghButton.className = "gh-button";
+                ghButton.id = "ghButton";
+                
+                ghButton.textContent = "GitHub Profile";
+                const container = document.getElementById("intro");
+                container.appendChild(ghButton);
+
+                ghButton.addEventListener('click', ()=>{
+                    window.open("https://www.github.com/krishnamanoj99/", "_self");
+                })
+            }
+        </script>
     </div>
     
 </body>
